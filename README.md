@@ -24,8 +24,8 @@ You can refer to the SQL Code for database creation in the file named: sql_code
 
 
 Below is the ADMIN LOGIN PAGE that has been created using the Query
-![](image/adminlogin.png)
-![](image/MAINPAGE.jpg)
-![](image/adminlogin.png)
+![](images/adminlogin.jpg)
+![](images/MAINPAGE.jpg)
+
 
 # Thank You!!
