@@ -21,7 +21,9 @@ In this project, we implement an airline reservation website which is similar to
 •	Bootstrap/CSS - for design the web pages.
 
 You can refer to the SQL Code for database creation in the file named: sql_code
-Below is the ADMIN LOGIN PAGE that has been created using the Query/;
+
+
+Below is the ADMIN LOGIN PAGE that has been created using the Query
 ![adminlogin](https://user-images.githubusercontent.com/45751094/63961282-0f389f00-caae-11e9-8224-fde5bd55fb7f.JPG)
 
 # Thank You!!
