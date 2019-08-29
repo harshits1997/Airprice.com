@@ -1,0 +1,76 @@
+**Database Design:**
+
+CREATE TABLE `admin` (
+`id` int(11) NOT NULL,
+`UserName` varchar(100) NOT NULL,
+`Password` varchar(100) NOT NULL );
+
+CREATE TABLE `airplane` (
+`ID` varchar(10) NOT NULL,
+`type` varchar(10) NOT NULL,
+`company` varchar(20) NOT NULL,
+PRIMARY KEY (`ID`) );
+
+CREATE TABLE `airport` (
+`code` varchar(10) NOT NULL,
+`name` varchar(50) NOT NULL,
+`city` varchar(20) NOT NULL,
+`state` varchar(20) NOT NULL,
+`country` varchar(20) NOT NULL,
+PRIMARY KEY (`code`) );
+
+CREATE TABLE `book` (
+`ID` int(11) NOT NULL AUTO_INCREMENT,
+`time` datetime NOT NULL,
+`date` date NOT NULL,
+`flightno` varchar(10) NOT NULL,
+`username` varchar(45) NOT NULL,
+`classtype` varchar(20) NOT NULL,
+`paid` int(1) DEFAULT '0',
+PRIMARY KEY (`ID`,`flightno`),
+KEY `username_idx` (`username`),
+KEY `classname_idx` (`classtype`),
+KEY `flightno_idx` (`flightno`,`classtype`),
+CONSTRAINT `flightno` FOREIGN KEY (`flightno`, `classtype`) REFERENCES `class` (`number`, `name`) ON DELETE CASCADE ON UPDATE CASCADE,
+CONSTRAINT `username` FOREIGN KEY (`username`) REFERENCES `passanger` (`username`) ON DELETE NO ACTION ON UPDATE NO ACTION );
+
+
+
+
+
+
+CREATE TABLE `class` (
+`number` varchar(10) NOT NULL,
+`name` varchar(20) NOT NULL,
+`capacity` int(11) NOT NULL,
+`price` float NOT NULL,
+PRIMARY KEY (`number`,`name`),
+KEY `number_idx` (`number`),
+CONSTRAINT `number` FOREIGN KEY (`number`) REFERENCES `flight` (`number`) ON DELETE CASCADE ON UPDATE CASCADE  );
+
+CREATE TABLE `flight` (
+`number` varchar(20) NOT NULL,
+`airplane_id` varchar(10) NOT NULL,
+`departure` varchar(10) NOT NULL,
+`d_time` time NOT NULL,
+`arrival` varchar(10) NOT NULL,
+`a_time` time NOT NULL,
+PRIMARY KEY (`number`),
+KEY `code_idx` (`departure`,`arrival`),
+KEY `airplaneid_idx` (`airplane_id`),
+KEY `arrival_idx` (`arrival`),
+CONSTRAINT `airplaneid` FOREIGN KEY (`airplane_id`) REFERENCES `airplane` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+CONSTRAINT `arrival` FOREIGN KEY (`arrival`) REFERENCES `airport` (`code`) ON DELETE CASCADE ON UPDATE CASCADE,
+CONSTRAINT `departure` FOREIGN KEY (`departure`) REFERENCES `airport` (`code`) ON DELETE CASCADE ON UPDATE CASCADE );
+
+CREATE TABLE `passanger` (
+`username` varchar(30) NOT NULL,
+`firstname` varchar(45) DEFAULT NULL,
+`middlename` varchar(45) DEFAULT NULL,
+`lastname` varchar(45) DEFAULT NULL,
+`email` varchar(45) DEFAULT NULL,
+`cellphone` varchar(15) DEFAULT NULL,
+`gender` varchar(10) DEFAULT NULL,
+`birthday` date DEFAULT NULL,
+`password` varchar(45) NOT NULL,
+PRIMARY KEY (`username`) );
