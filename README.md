@@ -24,6 +24,8 @@ You can refer to the SQL Code for database creation in the file named: sql_code
 
 
 Below is the ADMIN LOGIN PAGE that has been created using the Query
-![adminlogin](https://user-images.githubusercontent.com/45751094/63961282-0f389f00-caae-11e9-8224-fde5bd55fb7f.JPG)
+![](image/adminlogin.png)
+![](image/MAINPAGE.jpg)
+![](image/adminlogin.png)
 
 # Thank You!!
