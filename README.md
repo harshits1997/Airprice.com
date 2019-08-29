@@ -19,3 +19,8 @@ In this project, we implement an airline reservation website which is similar to
 •	Javascript/JQuery/Ajax - for client side scripting.
 
 •	Bootstrap/CSS - for design the web pages.
+
+You can refer to the SQL Code for database creation in the file named: sql_code
+For images you can refer to the various PNG files that have been uploaded.
+
+# Thank You!!
