@@ -1,4 +1,3 @@
-**Database Design:**
 
 CREATE TABLE `admin` (
 `id` int(11) NOT NULL,
@@ -33,9 +32,6 @@ KEY `classname_idx` (`classtype`),
 KEY `flightno_idx` (`flightno`,`classtype`),
 CONSTRAINT `flightno` FOREIGN KEY (`flightno`, `classtype`) REFERENCES `class` (`number`, `name`) ON DELETE CASCADE ON UPDATE CASCADE,
 CONSTRAINT `username` FOREIGN KEY (`username`) REFERENCES `passanger` (`username`) ON DELETE NO ACTION ON UPDATE NO ACTION );
-
-
-
 
 
 
