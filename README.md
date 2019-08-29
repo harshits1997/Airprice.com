@@ -21,6 +21,8 @@ In this project, we implement an airline reservation website which is similar to
 •	Bootstrap/CSS - for design the web pages.
 
 You can refer to the SQL Code for database creation in the file named: sql_code
-Please refer to the images folder to check all the Images of the database
+
+
+****Please refer to the images folder to check all the Images of the database
 
 # Thank You!!
